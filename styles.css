@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: rgb(141, 2, 2);
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Logo Section */
+.logo {
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    border-radius: 5px;
+}
+
+/* Home Link */
+.home a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 20px;
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+.home a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
