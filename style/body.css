@@ -1,0 +1,28 @@
+/* Styling the Trending Movies button */
+.trending-btn {
+    padding: 15px 30px;
+    background-color: rgb(158, 0, 0);
+    color: rgba(255, 255, 255, 0.71);
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 20px;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    position: relative;
+    left: 300px;
+    top: 200px;
+}
+
+/* Setting the background image for the page */
+body {
+    background-image: url("../images/cutscene.png");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Styling the main heading and paragraphs */
+.h1, p {
+    color: rgba(255, 255, 255, 0.71);
+    margin: 50px;
+}

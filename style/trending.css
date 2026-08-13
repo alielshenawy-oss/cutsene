@@ -1,0 +1,43 @@
+/* Styling for the Trending Movies section */
+.movies-section {
+    padding: 40px;
+    color: rgba(255, 255, 255, 0.71);
+}
+
+/* Styling for the Trending Movies heading */
+.movies-section h2 {
+    font-size: 30px;
+}
+
+/* Creating a grid layout for the movie cards */
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 70px;
+}
+
+/* Styling for each movie card */
+.movie-card {
+    background: rgb(158, 0, 0);
+    border-radius: 40px;
+}
+
+/* Styling for the movie poster image */
+.movie-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-start-end-radius: 40px;
+}
+
+/* Setting the background image for the page */
+body {
+    background-image: url("../images/cutscene.png");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Adding space from the left side for movie titles and information */
+.movies-section h3, p {
+    margin-left: 10px;
+}
