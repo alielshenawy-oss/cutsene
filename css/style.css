@@ -10,7 +10,7 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    background-color: #121212; /* خلفية داكنة موحدة لموقع البث */
+    background-color: #222;
     color: #ffffff; /* جعل اللون الافتراضي للنصوص أبيض */
 }
 
@@ -18,7 +18,7 @@ body {
    2. شريط التنقل (Navbar)
    ========================================== */
 .custom-navbar {
-    background-color: #121212;
+    background-color: #222;
     padding: 12px 0; /* مسافة رأسية أعلى وأسفل الشريط */
 }
 
@@ -73,8 +73,9 @@ body {
 
 /* شارة الإشعار (🔴 SCENE 01) */
 .scene {
+    color: #888;
     font-weight: 600;
-    letter-spacing: 2px; /* تباعد الحروف لإبراز النص الترويجي */
+    letter-spacing: 1px; /* تباعد الحروف لإبراز النص الترويجي */
 }
 
 /* النص الوصفي تحت العنوان */
@@ -82,15 +83,84 @@ body {
     max-width: 700px; /* تحديد أقصى عرض لسطر القراءة لراحة العين */
     margin: 30px auto 0; /* توسيط الكتلة النصية مع هامش علوي */
 }
+/* ==========================================
+   5. card section
+========================================== */
+
+.text-center h3 {
+    color: white;
+    font-family: 'PP Right Grotesk', 'Clash Display', 'Arial Black', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+
+
+.feature-card {
+    background-color: #2b3035;
+    border: 1px solid #464c52;
+    border-radius: 18px;
+    padding: 30px;
+    height: 100%;
+}
+
+.icon-box {
+    width: 60px;
+    height: 60px;
+    background-color: #40282d;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+}
+
+.icon-box img {
+    color: red;
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.feature-card h5 {
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #999;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
 
 /* ==========================================
-   5. التذييل (Footer)
+   6. التذييل (Footer)
    ========================================== */
 .custom-footer {
-    background-color: #0b0b0b; /* لون أغمق بدرجة بسيطة من الخلفية لإعطاء عمق بصري */
+    background-color: #222;
     color: #8c8c8c; /* لون رمادي هادئ لبيانات الحقوق */
     padding: 20px 0;
     font-size: 14px;
     border-top: 1px solid rgba(255, 255, 255, 0.08); /* خط فاصل شفاف جداً */
     margin-top: auto; /* الخاصية السحرية التي تدفع الفوتر لأسفل الشاشة دائماً */
+}
+
+/* ==========================================
+   Desktop Only - min-vh-100 لل Hero والFeatures
+   ========================================== */
+@media (min-width: 769px) {
+    .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .features-section {
+        min-height: 100vh;
+    }
 }
