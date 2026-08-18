@@ -1,173 +1,206 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <!-- ترميز النصوص لتشفير الأحرف بدقة وتدعم كافة اللغات -->
-    <meta charset="UTF-8">
-    
-    <!-- ضبط أبعاد الشاشة لضمان تجاوب الموقع (Responsive) على كل الهواتف والشاشات -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- عنوان الصفحة الذي يظهر في أعلى التبويب بالموقع -->
-    <title>Watch Best New Movies &amp; Shows from Biggest Studios | Cutscene</title>
-    
-    <!-- استدعاء ملف تنسيقات Bootstrap 5 من الـ CDN مع تفعيل حماية SRI التشفيرية -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">    
-    
-    <!-- ملف CSS المخصص للتعديل على التصميم الأساسي -->
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
+    <meta charset="UTF-8" />
 
+    <!-- ضبط أبعاد الشاشة لضمان تجاوب الموقع (Responsive) على كل الهواتف والشاشات -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- عنوان الصفحة الذي يظهر في أعلى التبويب بالموقع -->
+    <title>
+      Watch Best New Movies &amp; Shows from Biggest Studios | Cutscene
+    </title>
+
+    <!-- استدعاء ملف تنسيقات Bootstrap 5 من الـ CDN مع تفعيل حماية SRI التشفيرية -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <!-- ملف CSS المخصص للتعديل على التصميم الأساسي -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/home.css" />
+  </head>
+  <body>
     <!-- ==========================================
          شريط التنقل العلوي (Navbar)
          ========================================== -->
     <!-- navbar-expand-lg: تجعل القائمة مفرودة في الشاشات الكبيرة وتتحول لزر في الشاشات الصغيرة -->
     <nav class="navbar navbar-expand-lg custom-navbar">
-        <!-- container px-5: حاوية تضمن توسيط المحتوى مع هامش داخلي جانبي -->
-        <div class="container px-5">
-            
-            <!-- الشعار (Logo): رابط ينقل للصفحة الرئيسية -->
-            <a class="navbar-brand me-4" href="#">
-                <img src="./images/logo.png" alt="CutSene Logo" height="36" class="d-inline-block align-text-top">
-            </a>
+      <!-- container px-5: حاوية تضمن توسيط المحتوى مع هامش داخلي جانبي -->
+      <div class="container px-5">
+        <!-- الشعار (Logo): رابط ينقل للصفحة الرئيسية -->
+        <a class="navbar-brand me-4" href="#">
+          <img
+            src="./images/logo.png"
+            alt="CutSene Logo"
+            height="36"
+            class="d-inline-block align-text-top"
+          />
+        </a>
 
-            <!-- زر الهامبرجر (Toggle Button): يظهر فقط على الهواتف لفتح وغلق القائمة -->
-            <!-- data-bs-toggle & data-bs-target: تربط الزر بـ id القائمة المطوية لفتحها بالجافاسكريبت -->
-            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <!-- زر الهامبرجر (Toggle Button): يظهر فقط على الهواتف لفتح وغلق القائمة -->
+        <!-- data-bs-toggle & data-bs-target: تربط الزر بـ id القائمة المطوية لفتحها بالجافاسكريبت -->
+        <button
+          class="navbar-toggler custom-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+          aria-controls="navbarContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <!-- القائمة القابلة للطي (Collapsible Area) -->
-            <div class="collapse navbar-collapse" id="navbarContent">
-                
-                <!-- مجموعة العناصر اليمنى (Right Actions) -->
-                <!-- ms-auto: تضيف هامشاً تلقائياً في البداية ليدفع العناصر إلى أقصى اليمين -->
-                <!-- gap-4: مسافة فاصلة بين القائمة المنسدلة والزر -->
-                <div class="d-flex align-items-center gap-4 right-actions ms-auto">
-                    
-                    <!-- القائمة المنسدلة لاختيار اللغة (Language Dropdown) -->
-                    <div class="nav-item dropdown">
-                        <!-- dropdown-toggle: تضيف سهم القائمة المنسدلة وتفعل التفاعل معها -->
-                        <a class="nav-link dropdown-toggle text-white fw-semibold d-flex align-items-center gap-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            EN
-                        </a>
-                        <!-- dropdown-menu-dark: تجعل القائمة المنسدلة سوداء للتناسق مع الثيم -->
-                        <!-- dropdown-menu-end: تضمن محاذاة القائمة لليمين لكي لا تخرج عن الشاشة -->
-                        <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
-                            <li><a class="dropdown-item" href="#">AR</a></li>
-                            <li><a class="dropdown-item" href="#">EN</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- زر البدء (Start Button) -->
-                    <!-- rounded-pill: تجعل حواف الزر دائرية تماماً (Capsule Style) -->
-                    <a href="#" class="btn btn-sign-in text-white rounded-pill fw-bold px-4">Start</a>
-
-                </div>
+        <!-- القائمة القابلة للطي (Collapsible Area) -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <!-- مجموعة العناصر اليمنى (Right Actions) -->
+          <!-- ms-auto: تضيف هامشاً تلقائياً في البداية ليدفع العناصر إلى أقصى اليمين -->
+          <!-- gap-4: مسافة فاصلة بين القائمة المنسدلة والزر -->
+          <div class="d-flex align-items-center gap-4 right-actions ms-auto">
+            <!-- القائمة المنسدلة لاختيار اللغة (Language Dropdown) -->
+            <div class="nav-item dropdown">
+              <!-- dropdown-toggle: تضيف سهم القائمة المنسدلة وتفعل التفاعل معها -->
+              <a
+                class="nav-link dropdown-toggle text-white fw-semibold d-flex align-items-center gap-1"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                EN
+              </a>
+              <!-- dropdown-menu-dark: تجعل القائمة المنسدلة سوداء للتناسق مع الثيم -->
+              <!-- dropdown-menu-end: تضمن محاذاة القائمة لليمين لكي لا تخرج عن الشاشة -->
+              <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">AR</a></li>
+                <li><a class="dropdown-item" href="#">EN</a></li>
+              </ul>
             </div>
+
+            <!-- زر البدء (Start Button) -->
+            <!-- rounded-pill: تجعل حواف الزر دائرية تماماً (Capsule Style) -->
+            <a
+              href="#"
+              class="btn btn-sign-in text-white rounded-pill fw-bold px-4"
+              >Start</a
+            >
+          </div>
         </div>
+      </div>
     </nav>
 
     <!-- ==========================================
          قسم الواجهة الرئيسية (Hero Section)
          ========================================== -->
     <section class="hero">
-        <div class="container text-center">
-            
-            <!-- شارة إشعار المباشر (Now Streaming Badge) -->
-            <p class="scene fw-bold">
-                🔴 SCENE 01 — NOW STREAMING
-            </p>
+      <div class="container text-center">
+        <!-- شارة إشعار المباشر (Now Streaming Badge) -->
+        <p class="scene fw-bold">🔴 SCENE 01 — NOW STREAMING</p>
 
-            <!-- العنوان الرئيسي (Main Heading) -->
-            <!-- display-1: خط ضخم وجريء مخصص لليافطات الرئيسية في بوتستراب -->
-            <h1 class="display-1 fw-bold">
-                Unlimited movies,<br>
-                TV shows, and more
-            </h1>
+        <!-- العنوان الرئيسي (Main Heading) -->
+        <!-- display-1: خط ضخم وجريء مخصص لليافطات الرئيسية في بوتستراب -->
+        <h1 class="display-1 fw-bold">
+          Unlimited movies,<br />
+          TV shows, and more
+        </h1>
 
-            <!-- النص الوصفي الفرعي (Subtext) -->
-            <!-- lead: يكبر حجم النص والتباعد ليجعل القراءة مريحة للمستخدم -->
-            <p class="lead">
-                Thousands of films and series in one place. Press play<br>
-                whenever the story calls — on any screen, any night.
-            </p>
-
-        </div>
+        <!-- النص الوصفي الفرعي (Subtext) -->
+        <!-- lead: يكبر حجم النص والتباعد ليجعل القراءة مريحة للمستخدم -->
+        <p class="lead">
+          Thousands of films and series in one place. Press play<br />
+          whenever the story calls — on any screen, any night.
+        </p>
+      </div>
     </section>
     <section class="features-section flex-column justify-content-center py-5">
-        <div class="container">
-            <div class="text-center mb-4">
-                <p class="scene fw-bold">🔴 SCENE 03 — WHY CUTSCENE</p>
-                <h3>Built for how you actually watch</h3>
-            </div>
-            <div class="row g-4">
-                <!-- Card 1 -->
-                <div class="col-12 col-md-6 col-xl-3">
-                    <div class="feature-card">
-                        <div class="icon-box">
-                            <img src="./images/monitor-smartphone.png" alt="Every screen icon">
-                        </div>
-                        <h5>Every screen, one login</h5>
-                        <p>
-                            Start on your TV, pick it back up on your phone.
-                            Your place in the story follows you.
-                        </p>
-                    </div>
-                </div>
-                <!-- Card 2 -->
-                <div class="col-12 col-md-6 col-xl-3">
-                    <div class="feature-card">
-                        <div class="icon-box">
-                            <img src="./images/arrow-down-to-line.png" alt="Download icon">
-                        </div>
-                        <h5>Download and go</h5>
-                        <p>
-                            Save your favorites before a flight or a commute,
-                            and watch without a connection.
-                        </p>
-                    </div>
-                </div>
-                <!-- Card 3 -->
-                <div class="col-12 col-md-6 col-xl-3">
-                    <div class="feature-card">
-                        <div class="icon-box">
-                            <img src="./images/users.png" alt="Profiles icon">
-                        </div>
-                        <h5>A profile for everyone</h5>
-                        <p>
-                            Separate watchlists and recommendations for each
-                            person in the house.
-                        </p>
-                    </div>
-                </div>
-                <!-- Card 4 -->
-                <div class="col-12 col-md-6 col-xl-3">
-                    <div class="feature-card">
-                        <div class="icon-box">
-                            <img src="./images/circle-x.png" alt="Cancel anytime icon">
-                        </div>
-                        <h5>Leave whenever</h5>
-                        <p>
-                            No contracts, no phone calls. Cancel your plan
-                            online in a couple of clicks.
-                        </p>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="text-center mb-4">
+          <p class="scene fw-bold">🔴 SCENE 03 — WHY CUTSCENE</p>
+          <h3>Built for how you actually watch</h3>
         </div>
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="feature-card">
+              <div class="icon-box">
+                <img
+                  src="./images/monitor-smartphone.png"
+                  alt="Every screen icon"
+                />
+              </div>
+              <h5>Every screen, one login</h5>
+              <p>
+                Start on your TV, pick it back up on your phone. Your place in
+                the story follows you.
+              </p>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="feature-card">
+              <div class="icon-box">
+                <img
+                  src="./images/arrow-down-to-line.png"
+                  alt="Download icon"
+                />
+              </div>
+              <h5>Download and go</h5>
+              <p>
+                Save your favorites before a flight or a commute, and watch
+                without a connection.
+              </p>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="feature-card">
+              <div class="icon-box">
+                <img src="./images/users.png" alt="Profiles icon" />
+              </div>
+              <h5>A profile for everyone</h5>
+              <p>
+                Separate watchlists and recommendations for each person in the
+                house.
+              </p>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="feature-card">
+              <div class="icon-box">
+                <img src="./images/circle-x.png" alt="Cancel anytime icon" />
+              </div>
+              <h5>Leave whenever</h5>
+              <p>
+                No contracts, no phone calls. Cancel your plan online in a
+                couple of clicks.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- ==========================================
          الفوتر (Footer)
          ========================================== -->
     <footer class="custom-footer">
-        <div class="container text-center">
-            <!-- mb-0: إلغاء الهامش السفلي الافتراضي للفقرة لمنع المسافات الزائدة -->
-            <p class="mb-0">All Rights Reserved CutSene 2026 ©.</p>
-        </div>
+      <div class="container text-center">
+        <!-- mb-0: إلغاء الهامش السفلي الافتراضي للفقرة لمنع المسافات الزائدة -->
+        <p class="mb-0">All Rights Reserved CutSene 2026 ©.</p>
+      </div>
     </footer>
 
     <!-- ملف Bootstrap Javascript Bundle (يشمل التفاعلات مثل فتح القوائم والـ Dropdowns) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-</body>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
