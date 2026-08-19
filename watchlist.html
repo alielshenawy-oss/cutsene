@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Watchlist - CineTrack</title>
+    <link rel="stylesheet" href="watchlist.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <div class="logo-icon">▶</div>
+            <span>Cine<span>Track</span></span>
+        </div>
+
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Movies</a>
+            <a href="#">TV Shows</a>
+            <a href="#">Search</a>
+            <a href="#" class="active">Library</a>
+        </div>
+
+        <div class="nav-right">
+            <div class="search-box">
+                <span>⌕</span>
+                <input type="text" placeholder="Search titles...">
+            </div>
+            <div class="profile">
+                <img src="https://i.pravatar.cc/100?img=12" alt="Profile">
+            </div>
+        </div>
+    </nav>
+
+    <main class="watchlist-page">
+        <div class="page-header">
+            <h1>My Watchlist <span id="movieCount">(0 titles)</span></h1>
+
+            <div class="sort-container">
+                <span>Sort by:</span>
+                <select id="sortSelect">
+                    <option value="date">Date Added</option>
+                    <option value="rating">Rating</option>
+                    <option value="title">Title</option>
+                    <option value="year">Year</option>
+                </select>
+            </div>
+        </div>
+
+        <section class="movies-grid" id="watchlistGrid"></section>
+    </main>
+
+    <script src="watchlist.js"></script>
+</body>
+</html>
