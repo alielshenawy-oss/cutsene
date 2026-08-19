@@ -1,0 +1,134 @@
+:root {
+    --color-bg: #1a1d21;
+    --color-bg-navbar: #1a1d21;
+    --color-bg-card: #2b3035;
+    --color-bg-icon: #40282d;
+    --color-accent: #e50914;
+    --color-text: #ffffff;
+    --color-text-muted: #999999;
+    --color-text-subtle: #888888;
+    --color-border: #464c52;
+    --color-border-soft: rgba(255, 255, 255, 0.08);
+    --font-display: 'PP Right Grotesk', 'Clash Display', 'Arial Black', sans-serif;
+    --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --radius-sm: 10px;
+    --radius-md: 18px;
+    --radius-pill: 999px;
+    --transition-base: all 0.3s ease;
+    --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+body{
+    background-color:var(--color-bg);
+}
+.navbar{
+    background-color:var(--color-bg-navbar) !important;
+    border-bottom:1px solid var(--color-border-soft);
+}
+.navbar a:hover{
+    color:var(--color-accent) !important;
+}
+section h3{
+    color:var(--color-text);
+    font-family: var(--font-display);
+    font-size:1.5rem;
+}
+section .links-movies a{
+    color:var(--color-text-muted);
+    background-color:var(--color-bg-card);
+    border:1px solid var(--color-border-soft);
+}
+section .links-movies a.active{
+    background-color:var(--color-accent) !important;
+    color:var(--color-text);
+    border:none;
+}
+section .links-movies a:hover{
+    background-color:var(--color-accent) !important;
+    color:var(--color-text) !important;
+    border:none !important;
+}
+.movies-careds{
+    cursor:pointer;
+    opacity:0;
+    transform:translateY(25px);
+    animation:cardReveal .7s ease forwards;
+}
+@keyframes cardReveal {
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+.movies-postar{
+    position:relative;
+    width:100%;
+    height:280px;
+    overflow:hidden;
+    border-radius:var(--radius-md);
+    background-color:var(--color-bg-card);
+    transition:transform .4s ease, box-shadow .4s ease;
+}
+.movies-postar img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    display:block;
+    transition:transform .6s ease, filter .6s ease;
+}
+.movies-postar::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to top, rgba(0, 0, 0, .75),transparent 55% );
+    opacity:0;
+    transition:opacity .4s ease;
+}
+.movies-careds:hover .movies-postar{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0, 0, 0, .45)
+}
+.movies-careds:hover .movies-postar img{
+    transform:scale(1.08);
+    filter:brightness(.75);
+}
+
+.movies-careds:hover .movies-postar::after{
+    opacity:1;
+}
+.movie-rating{
+    position:absolute;
+    top:8px;
+    left:8px;
+    z-index:2;
+    background-color:var(--color-bg-icon);
+    color:var(--color-text);
+    border-radius:5px;
+    padding:4px 8px;
+    font-weight:bold;
+    border:1px solid var(--color-border-soft);
+    transition:transform .4s ease,background-color .4s ease;
+}
+.movies-careds:hover .movie-rating{
+    transform:translateY(-3px) scale(1.05);
+    background-color:var(--color-accent);
+}
+.movies-careds h4{
+    color:var(--color-text);
+    font-size:14px;
+    margin:8px 0 2px;
+    transition:transform .4s ease,color .4s ease;
+}
+.movies-careds:hover h4{
+    transform:translateX(4px);
+    color:var(--color-accent);
+}
+.movies-careds p{
+    color:var(--color-text-subtle);
+    font-size:12px;
+    margin:0;
+    transition:transform .4s ease,;
+}
+
+.movies-careds:hover p{
+    transform:rotateX(4px);
+}
