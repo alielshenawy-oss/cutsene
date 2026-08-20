@@ -2,6 +2,87 @@
    Home Page Styles
    ========================================== */
 
+
+.btn-sign-in {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 14px;
+    padding: 10px 24px;
+    line-height: 1.2;
+    transition: var(--transition-base);
+    white-space: nowrap;
+}
+
+.btn-sign-in:hover,
+.btn-sign-in:focus {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: var(--color-text);
+    transform: translateY(-1px);
+}
+.custom-navbar {
+    background-color: var(--color-bg-navbar);
+    padding: 16px 0;
+    border-bottom: 1px solid var(--color-border-soft);
+}
+
+.navbar-brand img {
+    width: auto;
+    height: 36px;
+}
+
+.nav-link.dropdown-toggle {
+    padding: 6px 4px;
+    opacity: 0.85;
+    transition: var(--transition-base);
+}
+
+.nav-link.dropdown-toggle:hover,
+.nav-link.dropdown-toggle:focus,
+.nav-link.dropdown-toggle.show {
+    opacity: 1;
+    color: var(--color-accent) !important;
+}
+
+.dropdown-toggle::after {
+    vertical-align: middle;
+    font-size: 12px;
+}
+
+.dropdown-menu {
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: 8px;
+    margin-top: 10px;
+}
+
+.dropdown-item {
+    color: var(--color-text);
+    border-radius: 6px;
+    padding: 8px 14px;
+    transition: var(--transition-base);
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: var(--color-accent);
+    color: var(--color-text);
+}
+
+.custom-toggler {
+    border-color: rgba(255, 255, 255, 0.15);
+    padding: 6px 10px;
+}
+
+.custom-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.35);
+}
+
+.custom-toggler .navbar-toggler-icon {
+    filter: invert(1);
+}
+
 /* Hero */
 .hero {
     padding: 100px 0;
@@ -95,7 +176,21 @@
     }
 
     .features-section {
-        min-height: 100vh;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+}
+
+/* Home Navbar + Layout Responsive */
+@media (max-width: 991.98px) {
+    .right-actions {
+        flex-direction: column;
+        align-items: stretch !important;
+        gap: 14px !important;
+    }
+
+    .right-actions .dropdown-menu {
+        margin-top: 6px;
     }
 }
 
