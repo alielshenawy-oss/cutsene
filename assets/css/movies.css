@@ -5,11 +5,7 @@
 .navbar a:hover{
     color:var(--color-accent) !important;
 }
-section h3{
-    color:var(--color-text);
-    font-family: var(--font-display);
-    font-size:1.5rem;
-}
+
 section .links-movies button{
     color:var(--color-text-muted);
     background-color:var(--color-bg-card);
