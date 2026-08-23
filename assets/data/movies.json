@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "title": "The Shawshank",
+    "year": 1994,
+    "rating": "9.3",
+    "image": "../assets/images/movies/The Shawshank Redemption (1994).jpg",
+    "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption."
+  },
+  {
+    "id": 2,
+    "title": "The Godfather",
+    "year": 1972,
+    "rating": "9.2",
+    "image": "../assets/images/movies/TheGodfather.jpg",
+    "description": "The aging patriarch of an organized crime dynasty transfers control of his empire to his son."
+  },
+  {
+    "id": 3,
+    "title": "The Dark Knight",
+    "year": 2008,
+    "rating": "9.1",
+    "image": "../assets/images/movies/Dark Knight, movie poster.jpg",
+    "description": "When the menace known as the Joker wreaks havoc, Batman must face his greatest test."
+  },
+  {
+    "id": 4,
+    "title": "The Godfather II",
+    "year": 1974,
+    "rating": "9.0",
+    "image": "../assets/images/movies/thegodfatherpart2.jpg",
+    "description": "The early life and career of Vito Corleone is shown alongside his son Michael's struggle to maintain the family business."
+  },
+  {
+    "id": 5,
+    "title": "12 Angry Men",
+    "year": 1957,
+    "rating": "9.0",
+    "image": "../assets/images/movies/12 Angry Men.jpg",
+    "description": "A jury of twelve men must decide the fate of a teenage boy accused of murder, with one dissenting voice."
+  },
+  {
+    "id": 6,
+    "title": "LOTR III",
+    "year": 2003,
+    "rating": "9.0",
+    "image": "../assets/images/movies/lord of the rings.jpg",
+    "description": "The final battle for Middle-earth begins as Frodo and Sam approach Mount Doom to destroy the One Ring."
+  },
+  {
+    "id": 7,
+    "title": "Schindler's List",
+    "year": 1993,
+    "rating": "9.0",
+    "image": "../assets/images/movies/shindler'slist.png",
+    "description": "In German-occupied Poland during WWII, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce."
+  },
+  {
+    "id": 8,
+    "title": "LOTR I",
+    "year": 2001,
+    "rating": "8.9",
+    "image": "../assets/images/movies/The Lord of The Rings - The Fellowship of the Ring.jpg",
+    "description": "A young hobbit and a fellowship of eight companions set out to destroy the One Ring and save Middle-earth."
+  },
+  {
+    "id": 9,
+    "title": "Pulp Fiction",
+    "year": 1994,
+    "rating": "8.8",
+    "image": "../assets/images/movies/Pulp Fiction (1994).jpg",
+    "description": "The lives of two mob hitmen, a boxer, a gangster's wife, and a pair of diner bandits intertwine."
+  },
+  {
+    "id": 10,
+    "title": "The Good, the Bad…",
+    "year": 1966,
+    "rating": "8.8",
+    "image": "../assets/images/movies/thegoodthebadtheugly.jpg",
+    "description": "Three gunslingers compete to find a cache of gold in the American Civil War era."
+  },
+  {
+    "id": 11,
+    "title": "Fight Club",
+    "year": 1999,
+    "rating": "8.8",
+    "image": "../assets/images/movies/FIGHT CLUB.jpg",
+    "description": "An insomniac office worker and a devil-may-care soap maker form an underground fight club."
+  },
+  {
+    "id": 12,
+    "title": "Forrest Gump",
+    "year": 1994,
+    "rating": "8.8",
+    "image": "../assets/images/movies/Forrest Gump.jpg",
+    "description": "The presidencies of Kennedy and Johnson, the Vietnam War, and other events unfold through the eyes of a man with a low IQ."
+  },
+  {
+    "id": 13,
+    "title": "Inception",
+    "year": 2010,
+    "rating": "8.7",
+    "image": "../assets/images/movies/inception.jpg",
+    "description": "A thief who steals corporate secrets through dream-sharing technology is given a chance at redemption."
+  },
+  {
+    "id": 14,
+    "title": "LOTR II",
+    "year": 2002,
+    "rating": "8.7",
+    "image": "../assets/images/movies/The Lord of The Rings - The two towers.jpg",
+    "description": "The Fellowship is broken, but they continue the quest to destroy the One Ring while a new threat arises."
+  },
+  {
+    "id": 15,
+    "title": "Goodfellas",
+    "year": 1990,
+    "rating": "8.7",
+    "image": "../assets/images/movies/Goodfellas.jpg",
+    "description": "The story of Henry Hill and his life in the mob, covering his relationship with his wife and his partners."
+  },
+  {
+    "id": 16,
+    "title": "The Matrix",
+    "year": 1999,
+    "rating": "8.7",
+    "image": "../assets/images/movies/thematrix.jpg",
+    "description": "A computer hacker learns about the true nature of reality and his role in the war against its controllers."
+  },
+  {
+    "id": 17,
+    "title": "Star Wars",
+    "year": 1980,
+    "rating": "8.7",
+    "image": "../assets/images/movies/Star Wars_ The Empire Strikes Back.jpg",
+    "description": "Luke Skywalker joins a rebellion to fight the evil Galactic Empire and rescue Princess Leia."
+  },
+  {
+    "id": 18,
+    "title": "Interstellar",
+    "year": 2014,
+    "rating": "8.7",
+    "image": "../assets/images/movies/interstellar.jpg",
+    "description": "A team of explorers travel through a wormhole in space to ensure humanity's survival."
+  }
+]

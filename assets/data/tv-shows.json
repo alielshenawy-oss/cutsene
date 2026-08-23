@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "title": "Breaking Bad",
+    "year": 2008,
+    "rating": "9.5",
+    "image": "../assets/images/series/breakingbad.jpg",
+    "description": "A high school chemistry teacher turned methamphetamine manufacturer partners with a former student."
+  },
+  {
+    "id": 2,
+    "title": "Band of Brothers",
+    "year": 2001,
+    "rating": "9.4",
+    "image": "../assets/images/series/bandofbrothers.jpg",
+    "description": "The story of Easy Company, an elite unit of the 101st Airborne Division, during WWII."
+  },
+  {
+    "id": 3,
+    "title": "The Wire",
+    "year": 2002,
+    "rating": "9.3",
+    "image": "https://m.media-amazon.com/images/M/MV5BYjIxZTMwZmUtOTUzYS00YmU2LWJhNDAtNzA2NDg0NDA0MjVkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+    "description": "A gritty portrayal of the drug trade in Baltimore, seen through the eyes of both law enforcement and criminals."
+  },
+  {
+    "id": 4,
+    "title": "Chernobyl",
+    "year": 2019,
+    "rating": "9.3",
+    "image": "../assets/images/series/Chernobyl (2019).jpg",
+    "description": "The true story of the 1986 nuclear disaster and the efforts to contain it."
+  },
+  {
+    "id": 5,
+    "title": "Avatar TLA",
+    "year": 2005,
+    "rating": "9.3",
+    "image": "../assets/images/series/Avatar The Last Airbender.jpg",
+    "description": "A young boy with the power to control all four elements sets out to master his abilities and save the world."
+  },
+  {
+    "id": 6,
+    "title": "The Sopranos",
+    "year": 1999,
+    "rating": "9.2",
+    "image": "../assets/images/series/The Sopranos.jpg",
+    "description": "A modern-day mob boss struggles to balance family life and the demands of his criminal organization."
+  },
+  {
+    "id": 7,
+    "title": "Game of Thrones",
+    "year": 2011,
+    "rating": "9.2",
+    "image": "../assets/images/series/Game of Thrones.jpg",
+    "description": "Nine noble families fight for control of the Iron Throne in a mythical land."
+  },
+  {
+    "id": 8,
+    "title": "Attack on Titan",
+    "year": 2013,
+    "rating": "9.1",
+    "image": "../assets/images/series/attack on titan.jpg",
+    "description": "Humanity lives inside walls to protect themselves from giant humanoid creatures called Titans."
+  },
+  {
+    "id": 9,
+    "title": "FMA",
+    "year": 2009,
+    "rating": "9.1",
+    "image": "../assets/images/series/fullmetalalchameist.jpg",
+    "description": "Two brothers search for the Philosopher's Stone to restore their bodies after a failed alchemical experiment."
+  },
+  {
+    "id": 10,
+    "title": "Bleach",
+    "year": 2022,
+    "rating": "9.0",
+    "image": "../assets/images/series/Bleach - Soul Resonance.jpg",
+    "description": "A teenager with the ability to see ghosts becomes a Soul Reaper and fights evil spirits."
+  },
+  {
+    "id": 11,
+    "title": "Rick and Morty",
+    "year": 2013,
+    "rating": "9.0",
+    "image": "../assets/images/series/rick and morty.jpg",
+    "description": "An eccentric scientist and his grandson go on wild adventures across the multiverse."
+  },
+  {
+    "id": 12,
+    "title": "Better Call Saul",
+    "year": 2015,
+    "rating": "9.0",
+    "image": "../assets/images/series/Better Call Saul TV Series Poster.jpg",
+    "description": "The story of Jimmy McGill, a lawyer who eventually becomes the notorious Saul Goodman."
+  },
+  {
+    "id": 13,
+    "title": "The Office",
+    "year": 2005,
+    "rating": "9.0",
+    "image": "../assets/images/series/the office.jpg",
+    "description": "A mockumentary-style look at the daily lives of office employees at Dunder Mifflin."
+  },
+  {
+    "id": 14,
+    "title": "One Piece",
+    "year": 1999,
+    "rating": "9.0",
+    "image": "../assets/images/series/onepiece.jpg",
+    "description": "A young pirate captain sets out to find the legendary treasure One Piece and become the Pirate King."
+  },
+  {
+    "id": 15,
+    "title": "Dexter",
+    "year": 2025,
+    "rating": "9.0",
+    "image": "../assets/images/series/Dexter.jpg",
+    "description": "A forensic blood spatter analyst moonlights as a vigilante serial killer, targeting other murderers."
+  },
+  {
+    "id": 16,
+    "title": "Sherlock",
+    "year": 2010,
+    "rating": "9.0",
+    "image": "../assets/images/series/Sherlock.jpg",
+    "description": "A modern adaptation of Sherlock Holmes, following the detective and his partner Dr. Watson."
+  },
+  {
+    "id": 17,
+    "title": "Arcane",
+    "year": 2021,
+    "rating": "9.0",
+    "image": "../assets/images/series/Arcane.jpg",
+    "description": "Two sisters fight on opposing sides of a conflict between the utopian city of Piltover and the oppressed undercity of Zaun."
+  },
+  {
+    "id": 18,
+    "title": "Hunter X Hunter",
+    "year": 2011,
+    "rating": "9.0",
+    "image": "../assets/images/series/HXH.jpg",
+    "description": "A young boy discovers his father is a legendary Hunter and sets out to become one himself."
+  }
+]
