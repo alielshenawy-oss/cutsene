@@ -59,14 +59,14 @@ a:hover {
 
 
 /* Footer */
-.custom-footer {
+/* .custom-footer {
     background-color: var(--color-bg);
     color: var(--color-text-subtle);
     padding: 20px 0;
     font-size: 14px;
     border-top: 1px solid var(--color-border-soft);
     margin-top: auto;
-}
+} */
 
 /* Shared Responsive Styles */
 @media (max-width: 991.98px) {

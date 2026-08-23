@@ -166,6 +166,9 @@
     margin: 0;
 }
 
+
+.footer-logo{ height: 26px; width: auto; }
+
 /* Desktop Home Layout */
 @media (min-width: 769px) {
     .hero {
