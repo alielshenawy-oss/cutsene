@@ -1,53 +1,3 @@
-// ================================================================
-// dashboard.js – with fallback data & debug logs
-// ================================================================
-
-// ─── HARDCODED FALLBACK (in case fetch fails) ───
-const FALLBACK_MOVIES = [
-  {
-    id: 1,
-    title: "The Shawshank",
-    year: 1994,
-    rating: "9.3",
-    image: "../assets/images/movies/The Shawshank Redemption (1994).jpg",
-    description:
-      "Two imprisoned men bond over a number of years, finding solace and eventual redemption.",
-  },
-  {
-    id: 2,
-    title: "The Godfather",
-    year: 1972,
-    rating: "9.2",
-    image: "../assets/images/movies/TheGodfather.jpg",
-    description:
-      "The aging patriarch of an organized crime dynasty transfers control of his empire to his son.",
-  },
-  {
-    id: 3,
-    title: "The Dark Knight",
-    year: 2008,
-    rating: "9.1",
-    image: "../assets/images/movies/Dark Knight, movie poster.jpg",
-    description:
-      "When the menace known as the Joker wreaks havoc, Batman must face his greatest test.",
-  },
-  // ... add all your movies here (or keep the JSON)
-];
-
-const FALLBACK_TV = [
-  {
-    id: 1,
-    title: "Breaking Bad",
-    year: 2008,
-    rating: "9.5",
-    image: "../assets/images/series/breakingbad.jpg",
-    description:
-      "A high school chemistry teacher turned methamphetamine manufacturer partners with a former student.",
-  },
-  // ... add all your TV shows here
-];
-
-// ─── MAIN ───
 document.addEventListener("DOMContentLoaded", function () {
   console.log("🚀 dashboard.js loaded");
 
@@ -64,8 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
     .catch((err) => {
       console.error("❌ Initialisation error:", err);
       // Fallback: render from hardcoded data
-      renderCards("moviesContainer", FALLBACK_MOVIES, "movie");
-      renderCards("tvShowsContainer", FALLBACK_TV, "tv");
+      renderCards("moviesContainer", [], "movie");
+      renderCards("tvShowsContainer", [], "tv");
     });
 
   // ─── MODAL LOGIC ───
@@ -103,18 +53,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // ─── FETCH & SEED ───
 async function fetchDataAndSeed() {
-  // If data already exists, skip fetch
-  if (localStorage.getItem("movies") && localStorage.getItem("tvShows")) {
-    console.log("📦 Data already in localStorage — skipping fetch.");
-    return;
-  }
-
   try {
     console.log("📡 Fetching JSON files...");
-    const [moviesRes, tvRes] = await Promise.all([
-      fetch("../assets/data/movies.json"),
-      fetch("../assets/data/tv-shows.json"),
-    ]);
+    // Add cache-busting query param to bypass browser cache
+    const moviesRes = await fetch("../assets/data/movies.json?" + Date.now());
+    const tvRes = await fetch("../assets/data/tv-shows.json?" + Date.now());
 
     if (!moviesRes.ok || !tvRes.ok) {
       throw new Error(
@@ -131,10 +74,9 @@ async function fetchDataAndSeed() {
     console.log("✅ Data seeded from JSON files.");
   } catch (error) {
     console.error("❌ Error fetching data:", error);
-    // If fetch fails, seed with fallback data
     console.log("🔄 Using fallback data.");
-    localStorage.setItem("movies", JSON.stringify(FALLBACK_MOVIES));
-    localStorage.setItem("tvShows", JSON.stringify(FALLBACK_TV));
+    localStorage.setItem("movies", JSON.stringify([]));
+    localStorage.setItem("tvShows", JSON.stringify([]));
   }
 }
 

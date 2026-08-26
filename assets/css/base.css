@@ -56,7 +56,15 @@ a {
 a:hover {
     color: var(--color-accent);
 }
+.eyebrow {
+    letter-spacing: .14em;
+}
 
+.eyebrow-dot {
+    width: 7px;
+    height: 7px;
+    box-shadow: 0 0 10px rgba(229, 9, 20, .75);
+}
 
 /* Footer */
 .custom-footer {
