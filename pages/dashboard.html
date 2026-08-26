@@ -12,6 +12,7 @@
     />
     <link rel="stylesheet" href="../assets/css/base.css" />
     <link rel="stylesheet" href="../assets/css/dashboard.css" />
+    <link rel="stylesheet" href="../assets/css/theme-toggle.css" />
     <title>Home</title>
   </head>
   <body>
@@ -67,6 +68,21 @@
               aria-label="Search"
             />
           </form>
+          <button
+            class="theme-toggle-btn ms-lg-3"
+            id="themeToggle"
+            type="button"
+            aria-pressed="false"
+            aria-label="Toggle light and dark mode"
+          >
+            <span class="theme-toggle-icon theme-icon-moon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </span>
+            <span class="theme-toggle-icon theme-icon-sun" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </span>
+            <span class="theme-toggle-knob"></span>
+          </button>
         </div>
       </div>
     </nav>
@@ -182,5 +198,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="../assets/js/dashboard.js"></script>
+    <script src="../assets/js/theme-toggle.js"></script>
   </body>
 </html>
