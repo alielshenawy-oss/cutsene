@@ -31,6 +31,12 @@
     });
 })();
 
+
+
+
+
+
+
 // ==========================================
 // Navbar Scroll Effect
 // Adds a background/shadow to the navbar once the page scrolls

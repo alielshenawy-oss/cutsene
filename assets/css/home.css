@@ -398,7 +398,6 @@
 }
 
 .feature-card:hover .icon-box {
-    background-color: var(--color-accent);
     transform: scale(1.06);
 }
 
