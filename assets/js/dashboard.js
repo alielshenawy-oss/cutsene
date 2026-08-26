@@ -1,8 +1,3 @@
-const FALLBACK_MOVIES = [];
-
-const FALLBACK_TV = [];
-
-// ─── MAIN ───
 document.addEventListener("DOMContentLoaded", function () {
   console.log("🚀 dashboard.js loaded");
 
@@ -19,8 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
     .catch((err) => {
       console.error("❌ Initialisation error:", err);
       // Fallback: render from hardcoded data
-      renderCards("moviesContainer", FALLBACK_MOVIES, "movie");
-      renderCards("tvShowsContainer", FALLBACK_TV, "tv");
+      renderCards("moviesContainer", [], "movie");
+      renderCards("tvShowsContainer", [], "tv");
     });
 
   // ─── MODAL LOGIC ───
@@ -61,10 +56,8 @@ async function fetchDataAndSeed() {
   try {
     console.log("📡 Fetching JSON files...");
     // Add cache-busting query param to bypass browser cache
-    const [moviesRes, tvRes] = await Promise.all([
-      fetch("../assets/data/movies.json?" + Date.now()),
-      fetch("../assets/data/tv-shows.json?" + Date.now()),
-    ]);
+    const moviesRes = await fetch("../assets/data/movies.json?" + Date.now());
+    const tvRes = await fetch("../assets/data/tv-shows.json?" + Date.now());
 
     if (!moviesRes.ok || !tvRes.ok) {
       throw new Error(
@@ -82,8 +75,8 @@ async function fetchDataAndSeed() {
   } catch (error) {
     console.error("❌ Error fetching data:", error);
     console.log("🔄 Using fallback data.");
-    localStorage.setItem("movies", JSON.stringify(FALLBACK_MOVIES));
-    localStorage.setItem("tvShows", JSON.stringify(FALLBACK_TV));
+    localStorage.setItem("movies", JSON.stringify([]));
+    localStorage.setItem("tvShows", JSON.stringify([]));
   }
 }
 
